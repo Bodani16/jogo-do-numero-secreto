@@ -1,6 +1,6 @@
 //variaveis:
 let listaNumeroSorteados = [];
-let numeroLimite = 10;
+let numeroLimite = 100;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -13,7 +13,7 @@ function exibirTextoNaTela(tag, texto){
 }
 function exibirMensagemInicial() {
     exibirTextoNaTela("h1", "Jogo do número secreto");
-    exibirTextoNaTela("p","Escolha um número entre 1 a 10.");
+    exibirTextoNaTela("p",`Escolha um número entre 1 a ${numeroLimite}.`);
 
 }
 
@@ -40,7 +40,7 @@ function verificarChute(){
         limparTexto ();
         //aviso caso o usario exceda o valor limite.
         if (chute > numeroLimite) {
-        exibirTextoNaTela("h1", "seu numero é maior que 10, porfavor digite um numero entre 1 a 10");
+        exibirTextoNaTela("h1", `seu numero é maior que ${numeroLimite}, porfavor digite um numero entre 1 a ${numeroLimite}.`);
     }
 }
 //funçao de gerar um numero aleatorio com uma lista.
